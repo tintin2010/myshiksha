@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector"
+    android:orientation="horizontal"
+    android:padding="5dip">
+
+    <!--  ListRow Left sized Thumbnail image of File Type -->
+    <LinearLayout
+        android:id="@+id/thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="5dip"
+        android:background="@drawable/image_bg"
+        android:padding="3dip">
+
+        <ImageView
+            android:id="@+id/list_row_image"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:src="@drawable/jpg_image" />
+
+    </LinearLayout>
+        <!--  File Name -->
+        <TextView
+            android:id="@+id/list_row_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#040404"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:typeface="sans"
+            android:layout_toRightOf="@+id/thumbnail"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp" />
+        <!-- File Size  -->
+        <TextView
+            android:id="@+id/list_row_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#040404"
+            android:textSize="15sp"
+            android:typeface="sans"
+            android:textStyle="bold"
+            android:layout_alignBottom="@+id/list_row_name"
+            android:layout_toLeftOf="@+id/download"
+            android:layout_alignTop="@+id/list_row_name"
+            android:layout_marginRight="30dp"/>
+
+    <!-- Download Arrow -->
+    <LinearLayout
+        android:id="@+id/download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dip"
+        android:background="@drawable/image_bg"
+        android:padding="3dip">
+
+        <ImageView
+            android:id="@+id/download_button"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:src="@drawable/download_icon" />
+    </LinearLayout>
+</RelativeLayout>
